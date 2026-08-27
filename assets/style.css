@@ -1,0 +1,81 @@
+html, body {
+  margin: 0 0.5em;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: white;
+  top: 0;
+  position: sticky;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1em;
+}
+header nav ul li {
+  list-style: none;
+  margin-right: 1em;
+}
+header nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: large;
+}
+
+main {
+  padding-top: 15em;
+  background-image: url("images/pont.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+main #main-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+  color: white;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 3em;
+  animation-duration: 2s;
+  animation-name: fade-in;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+main #arrow-main-title {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "STIX Two Math", serif;
+  font-size: 10em;
+  margin-bottom: 1em;
+  animation: bounce 1.5s ease-in-out infinite;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+main #wrapper {
+  background-color: white;
+  width: 80%;
+  height: 200vh;
+  margin: auto;
+}
+
+/*# sourceMappingURL=style.css.map */
