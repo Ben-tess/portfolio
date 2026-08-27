@@ -1,6 +1,7 @@
 html, body {
   margin: 0 0.5em;
   height: 100%;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 body {
@@ -20,17 +21,16 @@ header nav ul {
 }
 header nav ul li {
   list-style: none;
-  margin-right: 1em;
+  margin-right: 2em;
 }
 header nav ul li a {
-  color: black;
+  color: #242121;
   text-decoration: none;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: large;
+  font-size: 1.5em;
 }
 
 main {
-  padding-top: 15em;
+  padding-top: 14em;
   background-image: url("images/pont.webp");
   background-size: cover;
   background-position: center;
@@ -39,9 +39,9 @@ main {
 main #main-title {
   display: flex;
   justify-content: center;
-  margin-bottom: 2em;
+  margin-left: 26%;
+  margin-bottom: 1em;
   color: white;
-  font-family: "Roboto Condensed", sans-serif;
   font-size: 3em;
   animation-duration: 2s;
   animation-name: fade-in;
@@ -54,6 +54,9 @@ main #main-title {
     opacity: 1;
   }
 }
+main #arrow-container {
+  animation: arrow-intro 0.5s ease-out forwards;
+}
 main #arrow-main-title {
   display: flex;
   justify-content: center;
@@ -62,6 +65,14 @@ main #arrow-main-title {
   font-size: 10em;
   margin-bottom: 1em;
   animation: bounce 1.5s ease-in-out infinite;
+}
+@keyframes arrow-intro {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 @keyframes bounce {
   0%, 100% {
@@ -76,6 +87,36 @@ main #wrapper {
   width: 80%;
   height: 200vh;
   margin: auto;
+  padding: 2em;
+}
+main #wrapper #about {
+  display: flex;
+  flex-direction: row;
+}
+main #wrapper #about .about-photo {
+  width: 400px;
+  height: 400px;
+  margin-right: 2em;
+}
+main #wrapper #about .about-txt {
+  margin-top: -1em;
+  line-height: 2em;
+  font-size: 20px;
+}
+main #wrapper #about .about-txt p {
+  width: 90%;
+  margin-left: 2em;
+  font-weight: 300;
+}
+main #wrapper .about-quote {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 2em;
+  padding: 2em;
+  font-size: 2em;
+  font-weight: 200;
+  border-block: 1px solid black;
 }
 
 /*# sourceMappingURL=style.css.map */
