@@ -3,6 +3,9 @@ html, body
     height: 100%
     font-family: "Roboto Condensed", sans-serif
 
+    a
+        text-decoration: none
+
 body
     display: flex
     flex-direction: column
@@ -24,8 +27,11 @@ header
 
                 a
                     color: #242121
-                    text-decoration: none
                     font-size: 1.5em
+                    transition: transform 0.5s ease
+
+                &:hover
+                    transform: scale(1.06)
 
 main
     padding-top: 14em
@@ -73,12 +79,12 @@ main
             transform: translateY(0)
 
         50%
-            transform: translateY(10px)
+            transform: translateY(20px)
 
     #wrapper
         background-color: white
         width: 80%
-        height: 200vh
+        height: auto
         margin: auto
         padding: 2em
 
@@ -90,10 +96,14 @@ main
                 width: 400px
                 height: 400px
                 margin-right: 2em
+                transition: transform 0.3s ease
+
+                &:hover
+                    transform: scale(1.04)
 
             .about-txt
                 margin-top: -1em
-                line-height: 2em
+                line-height: 1.2em
                 font-size: 20px
 
                 p
@@ -103,6 +113,7 @@ main
 
         .about-quote
             display: flex
+            flex-direction: column
             justify-content: center
             text-align: center
             margin: 2em
@@ -110,3 +121,93 @@ main
             font-size: 2em
             font-weight: 200
             border-block: 1px solid black
+            transition: transform 0.3s ease
+
+            &:hover
+                transform: scale(1.04)
+
+            p
+                margin: 0
+
+            #lynch
+                font-weight: 400
+                margin-top: 1em
+
+        #projects
+
+            #projects-title
+                display: flex
+                justify-content: center
+                font-size: 4em
+
+            #projects-section
+                display: flex
+                flex-direction: row
+                justify-content: center
+                flex-wrap: wrap
+                margin-top: 2.5em
+
+                .project-link
+                    width: 40%
+
+                    .project-card
+                        position: relative
+                        padding: 2em
+                        margin: 2em
+                        height: 5em
+                        filter: grayscale(100%)
+                        transition: transform 0.3s ease, height 0.5s ease, filter 0.3s ease
+
+                        h2,
+                        img
+                            opacity: 0
+                            visibility: hidden
+                            transition: opacity 0.3s ease
+
+                        &:hover
+                            height: 40em
+                            transform: scale(1.04)
+                            filter: grayscale(0%)
+                            box-shadow: 0 0 10px black
+
+                            h2,
+                            img
+                                opacity: 1
+                                visibility: visible
+
+                    h1,
+                    h2
+                    text-align: center
+
+                    h2
+                        position: absolute
+                        top: 75%
+                        left: 50%
+                        transform: translateX(-50%)
+                        font-weight: 300
+
+                    img
+                        position: absolute
+                        top: 45%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                        width: 300px
+
+                    #project-nina
+                        border-block: thick double #5a1c77
+
+                        h1,
+                        h2
+                            color: #5a1c77
+
+                    #project-kasa
+                        border-block: thick double #ff6060
+
+                        h1,
+                        h2
+                            color: #ff6060
+
+                        img
+                            width: 200px
+                            border-block: 1px solid #ff6060
+                            padding: 120px 50px
