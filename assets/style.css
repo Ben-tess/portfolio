@@ -1,6 +1,5 @@
 html, body {
   margin: 0 0.5em;
-  height: 100%;
   font-family: "Roboto Condensed", sans-serif;
 }
 html a, body a {
@@ -10,18 +9,14 @@ html a, body a {
 html li, body li {
   list-style: none;
 }
-html #projects-title,
-html #contact-title, body #projects-title,
-body #contact-title {
+html .section-titles, body .section-titles {
   display: flex;
   align-items: center;
+  font-size: 4em;
+  margin: 1em;
   gap: 1em;
 }
-html #projects-title::before, html #projects-title::after,
-html #contact-title::before,
-html #contact-title::after, body #projects-title::before, body #projects-title::after,
-body #contact-title::before,
-body #contact-title::after {
+html .section-titles::before, html .section-titles::after, body .section-titles::before, body .section-titles::after {
   content: "";
   height: 1px;
   background-color: black;
@@ -34,8 +29,9 @@ body {
 }
 body header {
   background-color: white;
-  top: 0;
   position: sticky;
+  top: 0;
+  z-index: 100;
 }
 body header nav ul {
   display: flex;
@@ -109,12 +105,15 @@ body main #wrapper {
   background-color: white;
   width: 80%;
   height: auto;
-  margin: auto;
-  padding: 2em;
+  margin: 0 auto 8em auto;
+  padding: 0.5em 2em 2em;
 }
 body main #wrapper #about {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
 }
 body main #wrapper #about .about-photo {
   width: 400px;
@@ -132,8 +131,6 @@ body main #wrapper #about .about-txt {
   font-size: 20px;
 }
 body main #wrapper #about .about-txt p {
-  width: 90%;
-  margin-left: 2em;
   font-weight: 300;
 }
 body main #wrapper #about .about-txt a {
@@ -163,12 +160,6 @@ body main #wrapper .quote .autor {
 }
 body main #wrapper #projects {
   margin-bottom: 7em;
-}
-body main #wrapper #projects #projects-title {
-  display: flex;
-  justify-content: center;
-  font-size: 4em;
-  margin: 1em 1em 0 1em;
 }
 body main #wrapper #projects #projects-section {
   display: flex;
@@ -227,12 +218,6 @@ body main #wrapper #projects #projects-section .project-link #project-bluel:hove
 body main #wrapper #projects #projects-section .project-link #project-grimoire:hover h1,
 body main #wrapper #projects #projects-section .project-link #project-grimoire:hover h2 {
   color: #d9aa62;
-}
-body main #wrapper #contact #contact-title {
-  display: flex;
-  justify-content: center;
-  font-size: 4em;
-  margin: 1em;
 }
 body main #wrapper #contact #contact-infos {
   width: 85%;
@@ -339,6 +324,10 @@ body main #wrapper #contact #formulaire .form .button:hover, body main #wrapper 
 }
 body main #wrapper #contact #formulaire .form .button:active {
   transform: scale(1);
+}
+body footer p {
+  text-align: center;
+  margin: 1.5em;
 }
 
 /*# sourceMappingURL=style.css.map */

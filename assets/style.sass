@@ -7,7 +7,6 @@ $form-error: red
 
 html, body
     margin: 0 0.5em
-    height: 100%
     font-family: "Roboto Condensed", sans-serif
 
     a
@@ -17,10 +16,11 @@ html, body
     li
         list-style: none
 
-    #projects-title,
-    #contact-title
+    .section-titles
         display: flex
         align-items: center
+        font-size: 4em
+        margin: 1em
         gap: 1em
 
         &::before,
@@ -30,14 +30,17 @@ html, body
             background-color: black
             flex: 1
 
+
+
 body
     display: flex
     flex-direction: column
 
     header
         background-color: white
-        top: 0
         position: sticky
+        top: 0
+        z-index: 100
 
         nav
             ul
@@ -107,12 +110,15 @@ body
             background-color: white
             width: 80%
             height: auto
-            margin: auto
-            padding: 2em
+            margin: 0 auto 8em auto
+            padding: 0.5em 2em 2em
 
             #about
                 display: flex
                 flex-direction: row
+                justify-content: center
+                width: 90%
+                margin: 0 auto
 
                 .about-photo
                     width: 400px
@@ -137,8 +143,6 @@ body
                     font-size: 20px
 
                     p
-                        width: 90%
-                        margin-left: 2em
                         font-weight: 300
 
                     a
@@ -168,12 +172,6 @@ body
 
             #projects
                 margin-bottom: 7em
-
-                #projects-title
-                    display: flex
-                    justify-content: center
-                    font-size: 4em
-                    margin: 1em 1em 0 1em
 
                 #projects-section
                     display: flex
@@ -243,12 +241,6 @@ body
                                 color: #d9aa62
                 
             #contact
-
-                #contact-title
-                    display: flex
-                    justify-content: center
-                    font-size: 4em
-                    margin: 1em
 
                 #contact-infos
                     width: 85%
@@ -376,3 +368,9 @@ body
 
                             &:active
                                 transform: scale(1)
+
+    footer
+
+        p
+            text-align: center
+            margin: 1.5em
