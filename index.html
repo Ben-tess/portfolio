@@ -7,7 +7,7 @@
 	<title>Benoît Tessier - Développeur Frontend</title>
 	<meta property="og:site_name" content="Benoît Tessier - Développeur Frontend" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="http://127.0.0.1:5500/index.html" />
+	<meta property="og:url" content="" />
 	<meta property="og:title" content="Benoît Tessier - Développeur Frontend" />
 	<meta property="og:description" content="Développeur Frontend React JavaScript" />
 	<meta property="og:image" content="./assets/images/pp.jpg" />
@@ -16,27 +16,27 @@
 	<meta name="twitter:title" content="Benoît Tessier - Développeur Frontend" />
 	<meta name="twitter:description" content="Développeur Frontend React JavaScript" />
 	<meta name="twitter:image" content="./assets/images/pp.jpg" />
-	<meta name="twitter:url" content="http://127.0.0.1:5500/index.html" />
+	<meta name="twitter:url" content="" />
 	<script type="application/ld+json">
 		{
 		"@context": "https://schema.org",
 		"@type": "ProfessionalService",
-		"name": "Benoît Tessier - Developper",
+		"name": "Benoît Tessier - Développeur",
 		"priceRange": "€€",
 		"url": "",
 		"image": "./assets/images/pp.jpg",
-		"telephone": "",
+		"telephone": "0123456789",
 		"address": {
 			"@type": "PostalAddress",
-			"streetAddress": "",
-			"addressLocality": "",
-			"postalCode": "",
+			"streetAddress": "Place de la Concorde",
+			"addressLocality": "1",
+			"postalCode": "75008",
 			"addressCountry": "FR"
 		},
 		"geo": {
 			"@type": "GeoCoordinates",
-			"latitude": 44.84683341635767,
-			"longitude": -0.6066244586499994
+			"latitude": 48° 51' 33.59" N,
+			"longitude": 2° 19' 9.60" E
 		},
 		"sameAs": [
 			"https://www.instagram.com/ninacarducci.photo/?hl=fr"
@@ -79,9 +79,10 @@
 				j'ai décidé de me reconvertir dans un métier totalement différent 
 				dans l'exécution tout en gardant le côté créatif qui me plaît 
 				tant.</p>
-				<p>J'ai choisi de faire confiance à Openclassrooms pour 
-				m'accompagner dans mon parcours en passant un BTS en 
-				développement web.</p>
+				<p>J'ai choisi de faire confiance à 
+				<a href="https://openclassrooms.com/fr/" target="_blank">
+				Openclassrooms</a> pour m'accompagner dans mon parcours en 
+				passant un BTS en développement web.</p>
 				<p>Je conçois des interfaces modernes, responsive et accessibles,
 				en accordant une attention particulière à l’expérience 
 				utilisateur.</p>
@@ -95,36 +96,109 @@
 				utilisateur.ice.s dans toute leur diversité.</p>
 			</div>
 		</div>
-		<div class="about-quote">
+		<div class="quote">
 			<p>“The thing about digital is it's absolutely anything you can think you can do.<br />
 			There are billions of things we haven't discovered yet.”</p>
-			<p id="lynch">- David Lynch</p>
+			<p class="autor">- David Lynch</p>
 		</div>
 		<div id="projects">
 			<h1 id="projects-title">Projets</h1>
 			<div id="projects-section">
 				<a href="#" class="project-link">
 					<article id="project-nina" class="project-card">
-						<h1>Nina Carducci - Photographe</h1>
-						<img
-						class='photo-nina'
-						src='assets/images/nina-600.webp'
-						alt='photo Nina Carducci'>
+						<h1>| Nina Carducci - Photographe |</h1>
 						<h2>Débuggage et optimisation de site web</h2>
 					</article>
 				</a>
 				<a href="#" class="project-link">
 					<article id="project-kasa" class="project-card">
-						<h1>Kasa</h1>
-						<img
-						class='logo-kasa'
-						src='assets/images/logo-header.svg'
-						alt='logo-kasa'>
-						<h2>Création d'une application de location immobilière avec 
-						React</h2>
+						<h1>| Kasa |</h1>
+						<h2>Création d'une application de location immobilière 
+							avec React</h2>
+					</article>
+				</a>
+				<a href="#" class="project-link">
+					<article id="project-bluel" class="project-card">
+						<h1>| Sophie Bluel - Architecte |</h1>
+						<h2>Développement du frontend dynamique d'un site</h2>
+					</article>
+				</a>
+				<a href="#" class="project-link">
+					<article id="project-grimoire" class="project-card">
+						<h1>| Mon vieux grimoire |</h1>
+						<h2>Développement du back-end d'un site de notation de 
+							livres</h2>
 					</article>
 				</a>
 			</div>
+		</div>
+		<div class="quote">
+			<p>“The only way of discovering the limits of the possible is to <br />
+			venture a little way past them into the impossible.”</p>
+			<p class="autor">- Arthur C. Clarke</p>
+		</div>
+		<div id="contact">
+			<h1 id="contact-title">Contact</h1>
+			<section id="contact-infos">
+				<section>
+					<h3>Localisation</h3>
+					<p>Paris</p>
+				</section>
+				<section>
+					<h3>Téléphone</h3>
+					<p>0123456789</p>
+				</section>
+				<section>
+					<h3>Email</h3>
+					<p id="mail">
+						tessier.benoit28@gmail.com</a>
+					</p>
+				</section>
+			</section>
+			<section id="formulaire">
+				<section id="formulaire">
+					<form 
+						class="form" 
+						action="https://formspree.io/f/myeyykyq" 
+						method="post">
+						<p class="field required half">
+							<label class="label required" for="name">Nom</label>
+							<input
+								class="text-input"
+								id="name"
+								type="text"
+								name="name"
+								required>
+						</p>
+						<p class="field required half">
+							<label class="label" for="email">E-mail</label>
+							<input
+								class="text-input"
+								id="email"
+								type="email"
+								name="email"
+								required>
+						</p>
+						<p class="field">
+							<label class="label" for="message">Message</label>
+							<textarea
+								class="textarea"
+								id="message"
+								name="message"
+								cols="50"
+								rows="4"
+								required></textarea>
+						</p>
+						<p class="field">
+							<input
+								class="button"
+								id="submit-button"
+								type="submit"
+								value="Envoyer message">
+						</p>
+					</form>
+				</section>
+			</section>
 		</div>
     </div>
 </main>

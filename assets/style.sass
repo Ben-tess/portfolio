@@ -1,3 +1,10 @@
+$form-bg: white
+$form-text: black
+$form-label: rgba(0, 0, 0, 0.7)
+$form-border: rgba(0, 0, 0, 0.3)
+$form-active: black
+$form-error: red
+
 html, body
     margin: 0 0.5em
     height: 100%
@@ -5,209 +12,367 @@ html, body
 
     a
         text-decoration: none
+        color: #242121
+
+    li
+        list-style: none
+
+    #projects-title,
+    #contact-title
+        display: flex
+        align-items: center
+        gap: 1em
+
+        &::before,
+        &::after
+            content: ""
+            height: 1px
+            background-color: black
+            flex: 1
 
 body
     display: flex
     flex-direction: column
 
-header
-    background-color: white
-    top: 0
-    position: sticky
-
-    nav
-        ul
-            display: flex
-            flex-direction: row
-            padding-left: 1em
-
-            li
-                list-style: none
-                margin-right: 2em
-
-                a
-                    color: #242121
-                    font-size: 1.5em
-                    transition: transform 0.5s ease
-
-                &:hover
-                    transform: scale(1.06)
-
-main
-    padding-top: 14em
-    background-image: url("images/pont.webp")
-    background-size: cover
-    background-position: center
-    background-attachment: fixed
-
-    #main-title
-        display: flex
-        justify-content: center
-        margin-left: 26%
-        margin-bottom: 1em
-        color: white
-        font-size: 3em
-        animation-duration: 2s
-        animation-name: fade-in
-
-    @keyframes fade-in
-        from
-            opacity: 0
-        to
-            opacity: 1
-    
-    #arrow-container
-        animation: arrow-intro 0.5s ease-out forwards
-
-    #arrow-main-title
-        display: flex
-        justify-content: center
-        color: white
-        font-family: "STIX Two Math", serif
-        font-size: 10em
-        margin-bottom: 1em
-        animation: bounce 1.5s ease-in-out infinite
-
-    @keyframes arrow-intro
-        from
-            transform: rotate(180deg)
-        to
-            transform: rotate(0deg)
-
-    @keyframes bounce
-        0%, 100%
-            transform: translateY(0)
-
-        50%
-            transform: translateY(20px)
-
-    #wrapper
+    header
         background-color: white
-        width: 80%
-        height: auto
-        margin: auto
-        padding: 2em
+        top: 0
+        position: sticky
 
-        #about
+        nav
+            ul
+                display: flex
+                flex-direction: row
+                padding-left: 1em
+
+                li
+                    margin-right: 2em
+
+                    a
+                        font-size: 1.5em
+                        transition: transform 0.5s ease
+
+                    &:hover
+                        transform: scale(1.06)
+
+    main
+        padding-top: 14em
+        background-image: url("images/pont.webp")
+        background-size: cover
+        background-position: center
+        background-attachment: fixed
+
+        #main-title
             display: flex
-            flex-direction: row
+            justify-content: center
+            margin-left: 26%
+            margin-bottom: 1em
+            color: white
+            font-size: 3em
+            animation-duration: 2s
+            animation-name: fade-in
 
-            .about-photo
-                width: 400px
-                height: 400px
-                margin-right: 2em
+        @keyframes fade-in
+            from
+                opacity: 0
+            to
+                opacity: 1
+        
+        #arrow-container
+            animation: arrow-intro 0.5s ease-out forwards
+
+        #arrow-main-title
+            display: flex
+            justify-content: center
+            color: white
+            font-family: "STIX Two Math", serif
+            font-size: 10em
+            margin-bottom: 1em
+            animation: bounce 1.5s ease-in-out infinite
+
+        @keyframes arrow-intro
+            from
+                transform: rotate(180deg)
+            to
+                transform: rotate(0deg)
+
+        @keyframes bounce
+            0%, 100%
+                transform: translateY(0)
+
+            50%
+                transform: translateY(20px)
+
+        #wrapper
+            background-color: white
+            width: 80%
+            height: auto
+            margin: auto
+            padding: 2em
+
+            #about
+                display: flex
+                flex-direction: row
+
+                .about-photo
+                    width: 400px
+                    height: 400px
+                    margin-right: 2em
+                    transition: transform 0.3s ease
+                    clip-path: polygon(
+                        30px 0,
+                        100% 0,
+                        100% calc(100% - 30px),
+                        calc(100% - 30px) 100%,
+                        0 100%,
+                        0 30px
+                    )
+
+                    &:hover
+                        transform: scale(1.04)
+
+                .about-txt
+                    margin-top: -1em
+                    line-height: 1.2em
+                    font-size: 20px
+
+                    p
+                        width: 90%
+                        margin-left: 2em
+                        font-weight: 300
+
+                    a
+                        color: #7957ec
+
+            .quote
+                display: flex
+                flex-direction: column
+                justify-content: center
+                text-align: center
+                margin: 2em
+                padding: 2em
+                font-size: 2em
+                font-weight: 200
+                border-block: 1px solid black
                 transition: transform 0.3s ease
 
                 &:hover
                     transform: scale(1.04)
 
-            .about-txt
-                margin-top: -1em
-                line-height: 1.2em
-                font-size: 20px
-
                 p
-                    width: 90%
-                    margin-left: 2em
-                    font-weight: 300
+                    margin: 0
 
-        .about-quote
-            display: flex
-            flex-direction: column
-            justify-content: center
-            text-align: center
-            margin: 2em
-            padding: 2em
-            font-size: 2em
-            font-weight: 200
-            border-block: 1px solid black
-            transition: transform 0.3s ease
+                .autor
+                    font-weight: 400
+                    margin-top: 1em
 
-            &:hover
-                transform: scale(1.04)
+            #projects
+                margin-bottom: 7em
 
-            p
-                margin: 0
+                #projects-title
+                    display: flex
+                    justify-content: center
+                    font-size: 4em
+                    margin: 1em 1em 0 1em
 
-            #lynch
-                font-weight: 400
-                margin-top: 1em
+                #projects-section
+                    display: flex
+                    flex-direction: row
+                    justify-content: center
+                    flex-wrap: wrap
 
-        #projects
+                    .project-link
+                        width: 40%
 
-            #projects-title
-                display: flex
-                justify-content: center
-                font-size: 4em
+                        .project-card
+                            position: relative
+                            padding: 2em
+                            margin: 2em
+                            height: 1em
+                            color: black
+                            transition: transform 0.3s ease, height 0.5s ease
 
-            #projects-section
-                display: flex
-                flex-direction: row
-                justify-content: center
-                flex-wrap: wrap
-                margin-top: 2.5em
+                            h2
+                                opacity: 0
+                                visibility: hidden
+                                transition: opacity 0.3s ease
 
-                .project-link
-                    width: 40%
+                            &:hover
+                                height: 12em
+                                transform: scale(1.04)
 
-                    .project-card
-                        position: relative
+                                h2,
+                                img
+                                    opacity: 1
+                                    visibility: visible
+
+                        h1,
+                        h2
+                            text-align: center
+
+                        h2
+                            position: absolute
+                            top: 35%
+                            left: 50%
+                            transform: translateX(-50%)
+                            font-weight: 300
+
+                        #project-nina:hover
+
+                            h1,
+                            h2
+                                //color: #5a1c77
+                                color: #a8d5d8
+
+                        #project-kasa:hover
+
+                            h1,
+                            h2
+                                color: #ff6060
+
+                        #project-bluel:hover
+
+                            h1,
+                            h2
+                                color: #b1663c
+
+                        #project-grimoire:hover
+
+                            h1,
+                            h2
+                                color: #d9aa62
+                
+            #contact
+
+                #contact-title
+                    display: flex
+                    justify-content: center
+                    font-size: 4em
+                    margin: 1em
+
+                #contact-infos
+                    width: 85%
+                    margin: 0 auto
+                    color: white
+                    background-color: black
+                    display: flex
+                    flex-direction: row
+                    justify-content: center
+                    gap: 14em
+                    padding: 2em
+                    clip-path: polygon(
+                        40px 0,
+                        100% 0,
+                        100% calc(100% - 40px),
+                        calc(100% - 40px) 100%,
+                        0 100%,
+                        0 40px
+                    )
+                    transition: transform 0.3s ease
+
+                    &:hover
+                        transform: scale(1.04)
+
+                #formulaire
+                    width: 100%
+                    margin-top: 4em
+
+                    .form
+                        max-width: 50em
+                        margin: 0 auto
                         padding: 2em
-                        margin: 2em
-                        height: 5em
-                        filter: grayscale(100%)
-                        transition: transform 0.3s ease, height 0.5s ease, filter 0.3s ease
+                        box-sizing: border-box
 
-                        h2,
-                        img
-                            opacity: 0
-                            visibility: hidden
-                            transition: opacity 0.3s ease
+                        .field
+                            position: relative
+                            width: 100%
+                            margin: 0 0 2.5em 0
 
-                        &:hover
-                            height: 40em
-                            transform: scale(1.04)
-                            filter: grayscale(0%)
-                            box-shadow: 0 0 10px black
+                            &.half
+                                @media screen and (min-width: 40em)
+                                    width: calc(50% - 1em)
+                                    float: left
 
-                            h2,
-                            img
-                                opacity: 1
-                                visibility: visible
+                                    &:nth-child(2)
+                                        margin-left: 2em
 
-                    h1,
-                    h2
-                    text-align: center
+                            &:nth-child(3)
+                                clear: both
 
-                    h2
-                        position: absolute
-                        top: 75%
-                        left: 50%
-                        transform: translateX(-50%)
-                        font-weight: 300
+                        // Labels
 
-                    img
-                        position: absolute
-                        top: 45%
-                        left: 50%
-                        transform: translate(-50%, -50%)
-                        width: 300px
+                        .label
+                            position: absolute
+                            top: 0.8em
+                            left: 0
+                            pointer-events: none
+                            color: $form-label
+                            font-size: 1em
+                            transition: all 0.3s ease
 
-                    #project-nina
-                        border-block: thick double #5a1c77
+                        .field.active
+                            .label
+                                top: -1.3em
+                                font-size: 0.75em
+                                font-weight: 600
+                                text-transform: uppercase
 
-                        h1,
-                        h2
-                            color: #5a1c77
+                        .field.focus
+                            .label
+                                color: $form-active
 
-                    #project-kasa
-                        border-block: thick double #ff6060
+                        // Inputs
 
-                        h1,
-                        h2
-                            color: #ff6060
+                        .text-input,
+                        .textarea
+                            width: 100%
+                            box-sizing: border-box
+                            display: block
+                            padding: 0.8em 0
+                            font: inherit
+                            font-size: 1em
+                            color: $form-text
+                            background: transparent
+                            border: none
+                            border-bottom: 1px solid $form-border
+                            outline: none
+                            transition: border-color 0.3s ease
 
-                        img
-                            width: 200px
-                            border-block: 1px solid #ff6060
-                            padding: 120px 50px
+                            &:focus
+                                border-bottom-color: $form-active
+
+                        .textarea
+                            min-height: 150px
+                            resize: vertical
+
+                        // Bouton
+
+                        .button
+                            display: block
+                            margin-left: auto
+                            padding: 0.8em 2em
+                            border: none
+                            background-color: $form-text
+                            color: white
+                            font: inherit
+                            font-size: 1em
+                            cursor: pointer
+                            text-transform: uppercase
+                            letter-spacing: 0.14em
+                            transition: background-color 0.3s ease, transform 0.3s ease
+                            clip-path: polygon(
+                                15px 0,
+                                100% 0,
+                                100% calc(100% - 15px),
+                                calc(100% - 15px) 100%,
+                                0 100%,
+                                0 15px
+                            )
+
+                            &:hover,
+                            &:focus
+                                background-color: #333
+                                transform: scale(1.04)
+
+                            &:active
+                                transform: scale(1)

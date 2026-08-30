@@ -5,44 +5,61 @@ html, body {
 }
 html a, body a {
   text-decoration: none;
+  color: #242121;
+}
+html li, body li {
+  list-style: none;
+}
+html #projects-title,
+html #contact-title, body #projects-title,
+body #contact-title {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+html #projects-title::before, html #projects-title::after,
+html #contact-title::before,
+html #contact-title::after, body #projects-title::before, body #projects-title::after,
+body #contact-title::before,
+body #contact-title::after {
+  content: "";
+  height: 1px;
+  background-color: black;
+  flex: 1;
 }
 
 body {
   display: flex;
   flex-direction: column;
 }
-
-header {
+body header {
   background-color: white;
   top: 0;
   position: sticky;
 }
-header nav ul {
+body header nav ul {
   display: flex;
   flex-direction: row;
   padding-left: 1em;
 }
-header nav ul li {
-  list-style: none;
+body header nav ul li {
   margin-right: 2em;
 }
-header nav ul li a {
-  color: #242121;
+body header nav ul li a {
   font-size: 1.5em;
   transition: transform 0.5s ease;
 }
-header nav ul li:hover {
+body header nav ul li:hover {
   transform: scale(1.06);
 }
-
-main {
+body main {
   padding-top: 14em;
   background-image: url("images/pont.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
-main #main-title {
+body main #main-title {
   display: flex;
   justify-content: center;
   margin-left: 26%;
@@ -60,10 +77,10 @@ main #main-title {
     opacity: 1;
   }
 }
-main #arrow-container {
+body main #arrow-container {
   animation: arrow-intro 0.5s ease-out forwards;
 }
-main #arrow-main-title {
+body main #arrow-main-title {
   display: flex;
   justify-content: center;
   color: white;
@@ -88,37 +105,41 @@ main #arrow-main-title {
     transform: translateY(20px);
   }
 }
-main #wrapper {
+body main #wrapper {
   background-color: white;
   width: 80%;
   height: auto;
   margin: auto;
   padding: 2em;
 }
-main #wrapper #about {
+body main #wrapper #about {
   display: flex;
   flex-direction: row;
 }
-main #wrapper #about .about-photo {
+body main #wrapper #about .about-photo {
   width: 400px;
   height: 400px;
   margin-right: 2em;
   transition: transform 0.3s ease;
+  clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px);
 }
-main #wrapper #about .about-photo:hover {
+body main #wrapper #about .about-photo:hover {
   transform: scale(1.04);
 }
-main #wrapper #about .about-txt {
+body main #wrapper #about .about-txt {
   margin-top: -1em;
   line-height: 1.2em;
   font-size: 20px;
 }
-main #wrapper #about .about-txt p {
+body main #wrapper #about .about-txt p {
   width: 90%;
   margin-left: 2em;
   font-weight: 300;
 }
-main #wrapper .about-quote {
+body main #wrapper #about .about-txt a {
+  color: #7957ec;
+}
+body main #wrapper .quote {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -130,91 +151,194 @@ main #wrapper .about-quote {
   border-block: 1px solid black;
   transition: transform 0.3s ease;
 }
-main #wrapper .about-quote:hover {
+body main #wrapper .quote:hover {
   transform: scale(1.04);
 }
-main #wrapper .about-quote p {
+body main #wrapper .quote p {
   margin: 0;
 }
-main #wrapper .about-quote #lynch {
+body main #wrapper .quote .autor {
   font-weight: 400;
   margin-top: 1em;
 }
-main #wrapper #projects #projects-title {
+body main #wrapper #projects {
+  margin-bottom: 7em;
+}
+body main #wrapper #projects #projects-title {
   display: flex;
   justify-content: center;
   font-size: 4em;
+  margin: 1em 1em 0 1em;
 }
-main #wrapper #projects #projects-section {
+body main #wrapper #projects #projects-section {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 2.5em;
 }
-main #wrapper #projects #projects-section .project-link {
+body main #wrapper #projects #projects-section .project-link {
   width: 40%;
 }
-main #wrapper #projects #projects-section .project-link .project-card {
+body main #wrapper #projects #projects-section .project-link .project-card {
   position: relative;
   padding: 2em;
   margin: 2em;
-  height: 5em;
-  filter: grayscale(100%);
-  transition: transform 0.3s ease, height 0.5s ease, filter 0.3s ease;
+  height: 1em;
+  color: black;
+  transition: transform 0.3s ease, height 0.5s ease;
 }
-main #wrapper #projects #projects-section .project-link .project-card h2,
-main #wrapper #projects #projects-section .project-link .project-card img {
+body main #wrapper #projects #projects-section .project-link .project-card h2 {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
 }
-main #wrapper #projects #projects-section .project-link .project-card:hover {
-  height: 40em;
+body main #wrapper #projects #projects-section .project-link .project-card:hover {
+  height: 12em;
   transform: scale(1.04);
-  filter: grayscale(0%);
-  box-shadow: 0 0 10px black;
 }
-main #wrapper #projects #projects-section .project-link .project-card:hover h2,
-main #wrapper #projects #projects-section .project-link .project-card:hover img {
+body main #wrapper #projects #projects-section .project-link .project-card:hover h2,
+body main #wrapper #projects #projects-section .project-link .project-card:hover img {
   opacity: 1;
   visibility: visible;
 }
-main #wrapper #projects #projects-section .project-link {
+body main #wrapper #projects #projects-section .project-link h1,
+body main #wrapper #projects #projects-section .project-link h2 {
   text-align: center;
 }
-main #wrapper #projects #projects-section .project-link h2 {
+body main #wrapper #projects #projects-section .project-link h2 {
   position: absolute;
-  top: 75%;
+  top: 35%;
   left: 50%;
   transform: translateX(-50%);
   font-weight: 300;
 }
-main #wrapper #projects #projects-section .project-link img {
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
+body main #wrapper #projects #projects-section .project-link #project-nina:hover h1,
+body main #wrapper #projects #projects-section .project-link #project-nina:hover h2 {
+  color: #a8d5d8;
 }
-main #wrapper #projects #projects-section .project-link #project-nina {
-  border-block: thick double #5a1c77;
-}
-main #wrapper #projects #projects-section .project-link #project-nina h1,
-main #wrapper #projects #projects-section .project-link #project-nina h2 {
-  color: #5a1c77;
-}
-main #wrapper #projects #projects-section .project-link #project-kasa {
-  border-block: thick double #ff6060;
-}
-main #wrapper #projects #projects-section .project-link #project-kasa h1,
-main #wrapper #projects #projects-section .project-link #project-kasa h2 {
+body main #wrapper #projects #projects-section .project-link #project-kasa:hover h1,
+body main #wrapper #projects #projects-section .project-link #project-kasa:hover h2 {
   color: #ff6060;
 }
-main #wrapper #projects #projects-section .project-link #project-kasa img {
-  width: 200px;
-  border-block: 1px solid #ff6060;
-  padding: 120px 50px;
+body main #wrapper #projects #projects-section .project-link #project-bluel:hover h1,
+body main #wrapper #projects #projects-section .project-link #project-bluel:hover h2 {
+  color: #b1663c;
+}
+body main #wrapper #projects #projects-section .project-link #project-grimoire:hover h1,
+body main #wrapper #projects #projects-section .project-link #project-grimoire:hover h2 {
+  color: #d9aa62;
+}
+body main #wrapper #contact #contact-title {
+  display: flex;
+  justify-content: center;
+  font-size: 4em;
+  margin: 1em;
+}
+body main #wrapper #contact #contact-infos {
+  width: 85%;
+  margin: 0 auto;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 14em;
+  padding: 2em;
+  clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
+  transition: transform 0.3s ease;
+}
+body main #wrapper #contact #contact-infos:hover {
+  transform: scale(1.04);
+}
+body main #wrapper #contact #formulaire {
+  width: 100%;
+  margin-top: 4em;
+}
+body main #wrapper #contact #formulaire .form {
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 2em;
+  box-sizing: border-box;
+}
+body main #wrapper #contact #formulaire .form .field {
+  position: relative;
+  width: 100%;
+  margin: 0 0 2.5em 0;
+}
+@media screen and (min-width: 40em) {
+  body main #wrapper #contact #formulaire .form .field.half {
+    width: calc(50% - 1em);
+    float: left;
+  }
+  body main #wrapper #contact #formulaire .form .field.half:nth-child(2) {
+    margin-left: 2em;
+  }
+}
+body main #wrapper #contact #formulaire .form .field:nth-child(3) {
+  clear: both;
+}
+body main #wrapper #contact #formulaire .form .label {
+  position: absolute;
+  top: 0.8em;
+  left: 0;
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+body main #wrapper #contact #formulaire .form .field.active .label {
+  top: -1.3em;
+  font-size: 0.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+body main #wrapper #contact #formulaire .form .field.focus .label {
+  color: black;
+}
+body main #wrapper #contact #formulaire .form .text-input,
+body main #wrapper #contact #formulaire .form .textarea {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  padding: 0.8em 0;
+  font: inherit;
+  font-size: 1em;
+  color: black;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+body main #wrapper #contact #formulaire .form .text-input:focus,
+body main #wrapper #contact #formulaire .form .textarea:focus {
+  border-bottom-color: black;
+}
+body main #wrapper #contact #formulaire .form .textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+body main #wrapper #contact #formulaire .form .button {
+  display: block;
+  margin-left: auto;
+  padding: 0.8em 2em;
+  border: none;
+  background-color: black;
+  color: white;
+  font: inherit;
+  font-size: 1em;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px);
+}
+body main #wrapper #contact #formulaire .form .button:hover, body main #wrapper #contact #formulaire .form .button:focus {
+  background-color: #333;
+  transform: scale(1.04);
+}
+body main #wrapper #contact #formulaire .form .button:active {
+  transform: scale(1);
 }
 
 /*# sourceMappingURL=style.css.map */
