@@ -33,6 +33,21 @@ body header {
   top: 0;
   z-index: 100;
 }
+body header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body header nav #logo-bt {
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 2em;
+  padding-top: 0.5em;
+  margin-left: 1em;
+  transition: transform 0.5s ease;
+}
+body header nav #logo-bt:hover {
+  transform: scale(1.06);
+}
 body header nav ul {
   display: flex;
   flex-direction: row;
@@ -116,8 +131,8 @@ body main #wrapper #about {
   margin: 0 auto;
 }
 body main #wrapper #about .about-photo {
-  width: 400px;
-  height: 400px;
+  width: 430px;
+  height: 430px;
   margin-right: 2em;
   transition: transform 0.3s ease;
   clip-path: polygon(30px 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0 30px);
@@ -230,10 +245,14 @@ body main #wrapper #contact #contact-infos {
   gap: 14em;
   padding: 2em;
   clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
+}
+body main #wrapper #contact #contact-infos img {
+  width: 2.5em;
+  margin-top: -0.5em;
   transition: transform 0.3s ease;
 }
-body main #wrapper #contact #contact-infos:hover {
-  transform: scale(1.04);
+body main #wrapper #contact #contact-infos img:hover {
+  transform: scale(1.1);
 }
 body main #wrapper #contact #formulaire {
   width: 100%;
@@ -325,9 +344,17 @@ body main #wrapper #contact #formulaire .form .button:hover, body main #wrapper 
 body main #wrapper #contact #formulaire .form .button:active {
   transform: scale(1);
 }
+body footer {
+  position: relative;
+}
 body footer p {
   text-align: center;
   margin: 1.5em;
+}
+body footer a {
+  position: absolute;
+  right: 1em;
+  top: 1.5em;
 }
 
 /*# sourceMappingURL=style.css.map */
