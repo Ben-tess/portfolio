@@ -1,0 +1,71 @@
+html, body
+    margin: 0 0.5em
+    font-family: "Roboto Condensed", sans-serif
+
+    a
+        text-decoration: none
+        color: #242121
+
+    li
+        list-style: none
+
+body
+    display: flex
+    flex-direction: column
+
+    header
+        background-color: white
+        position: sticky
+        top: 0
+        z-index: 100
+
+        nav
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            
+            #logo-bt
+                font-family: "Mrs Saint Delafield", cursive
+                font-size: 2em
+                padding-top: 0.5em
+                margin-left: 1em
+                transition: transform 0.5s ease
+
+                &:hover
+                    transform: scale(1.06)
+
+            ul
+                display: flex
+                flex-direction: row
+                padding-left: 1em
+
+                li
+                    margin-right: 2em
+
+                    a
+                        font-size: 1.5em
+                        transition: transform 0.5s ease
+
+                    &:hover
+                        transform: scale(1.06)
+
+    main
+        padding-top: 8em
+        background-image: url("images/pont.webp")
+        background-size: cover
+        background-position: center
+        background-attachment: fixed     
+
+        #wrapper
+            background-color: white
+            width: 80%
+            height: auto
+            margin: 0 auto 8em auto
+            padding: 0.5em 2em 2em
+
+    footer
+        position: relative
+
+        p
+            text-align: center
+            margin: 1.5em

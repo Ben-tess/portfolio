@@ -65,3 +65,7 @@ class FloatingLabel {
 window.floatingLabel = new FloatingLabel(
     document.querySelector(".form")
 );
+
+window.addEventListener("load", () => {
+    baguetteBox.run(".baguetteBoxGallery");
+});

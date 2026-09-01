@@ -355,6 +355,10 @@ body footer a {
   position: absolute;
   right: 1em;
   top: 1.5em;
+  transition: transform 0.3s ease;
+}
+body footer a:hover {
+  transform: scale(1.04);
 }
 
 /*# sourceMappingURL=style.css.map */

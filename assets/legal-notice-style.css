@@ -1,0 +1,75 @@
+html, body {
+  margin: 0 0.5em;
+  font-family: "Roboto Condensed", sans-serif;
+}
+html a, body a {
+  text-decoration: none;
+  color: #242121;
+}
+html li, body li {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+body header {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+body header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body header nav #logo-bt {
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 2em;
+  padding-top: 0.5em;
+  margin-left: 1em;
+  transition: transform 0.5s ease;
+}
+body header nav #logo-bt:hover {
+  transform: scale(1.06);
+}
+body header nav ul {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1em;
+}
+body header nav ul li {
+  margin-right: 2em;
+}
+body header nav ul li a {
+  font-size: 1.5em;
+  transition: transform 0.5s ease;
+}
+body header nav ul li:hover {
+  transform: scale(1.06);
+}
+body main {
+  padding-top: 8em;
+  background-image: url("images/pont.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+body main #wrapper {
+  background-color: white;
+  width: 80%;
+  height: auto;
+  margin: 0 auto 8em auto;
+  padding: 0.5em 2em 2em;
+}
+body footer {
+  position: relative;
+}
+body footer p {
+  text-align: center;
+  margin: 1.5em;
+}
+
+/*# sourceMappingURL=legal-notice-style.css.map */

@@ -1,0 +1,150 @@
+html, body {
+  margin: 0 0.5em;
+  font-family: "Roboto Condensed", sans-serif;
+}
+html a, body a {
+  text-decoration: none;
+  color: #242121;
+}
+html li, body li {
+  list-style: none;
+}
+html .section-titles, body .section-titles {
+  display: flex;
+  align-items: center;
+  font-size: 4em;
+  margin: 1em;
+  gap: 1em;
+}
+html .section-titles::before, html .section-titles::after, body .section-titles::before, body .section-titles::after {
+  content: "";
+  height: 1px;
+  background-color: black;
+  flex: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+body header {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+body header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body header nav #logo-bt {
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 2em;
+  padding-top: 0.5em;
+  margin-left: 1em;
+  transition: transform 0.5s ease;
+}
+body header nav #logo-bt:hover {
+  transform: scale(1.06);
+}
+body header nav ul {
+  display: flex;
+  flex-direction: row;
+  padding-left: 1em;
+}
+body header nav ul li {
+  margin-right: 2em;
+}
+body header nav ul li a {
+  font-size: 1.5em;
+  transition: transform 0.5s ease;
+}
+body header nav ul li:hover {
+  transform: scale(1.06);
+}
+body main {
+  padding-top: 8em;
+  background-image: url("images/pont.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+body main #wrapper {
+  background-color: white;
+  width: 80%;
+  height: auto;
+  margin: 0 auto 8em auto;
+  padding: 0.5em 2em 2em;
+}
+body main #wrapper .section-titles {
+  margin-bottom: 0;
+}
+body main #wrapper .subtitles {
+  text-align: center;
+  margin-bottom: 1em;
+}
+body main #wrapper a {
+  display: flex;
+  justify-content: center;
+  color: #7957ec;
+}
+body main #wrapper .project-gallery {
+  background-color: rgba(0, 0, 0, 0.0666666667);
+  margin: 2em 0 2em 0;
+  padding: 2em 0 2em 0;
+  border-radius: 8px;
+}
+body main #wrapper .project-gallery .project-screenshots {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+body main #wrapper .project-gallery .project-screenshots a {
+  width: 30%;
+  transition: transform 0.3s ease;
+}
+body main #wrapper .project-gallery .project-screenshots a:hover {
+  transform: scale(1.04);
+}
+body main #wrapper .project-gallery .project-screenshots a img {
+  width: 100%;
+}
+body main #wrapper .project-description {
+  margin-bottom: 3em;
+}
+body main #wrapper .project-used-techno .project-section-techno {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5em;
+  margin: 2em auto 3em auto;
+}
+body main #wrapper .project-used-techno .project-section-techno .project-techno-logo {
+  width: 100px;
+}
+body footer {
+  position: relative;
+}
+body footer p {
+  text-align: center;
+  margin: 1.5em;
+}
+body footer a {
+  position: absolute;
+  right: 1em;
+  top: 1.5em;
+  transition: transform 0.3s ease;
+}
+body footer a:hover {
+  transform: scale(1.04);
+}
+
+#baguetteBox-overlay .full-image img {
+  max-width: 75vw;
+  max-height: auto;
+}
+
+/*# sourceMappingURL=project-style.css.map */
