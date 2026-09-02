@@ -64,8 +64,20 @@ body
             padding: 0.5em 2em 2em
 
     footer
-        position: relative
+        display: flex
+        flex-direction: row
+        align-content: center
+        justify-content: space-between
 
-        p
-            text-align: center
+        #footer-notice
+            visibility: hidden
+
+        p,
+        a
             margin: 1.5em
+
+        a
+            transition: transform 0.3s ease
+
+            &:hover
+                transform: scale(1.04)

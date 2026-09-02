@@ -160,6 +160,25 @@ body
                     a
                         color: #7957ec
 
+            #curriculum
+                width: 85%
+                margin: 2em auto
+                color: white
+                background-color: black
+                display: flex
+                flex-direction: row
+                justify-content: center
+                gap: 5em
+                padding: 2em
+                clip-path: polygon(
+                    40px 0,
+                    100% 0,
+                    100% calc(100% - 40px),
+                    calc(100% - 40px) 100%,
+                    0 100%,
+                    0 40px
+                )
+
             .quote
                 display: flex
                 flex-direction: column
@@ -190,48 +209,38 @@ body
                     flex-direction: row
                     justify-content: center
                     flex-wrap: wrap
+                    background-color: black
+                    width: 85%
+                    margin: 2em auto
+                    clip-path: polygon(
+                        40px 0,
+                        100% 0,
+                        100% calc(100% - 40px),
+                        calc(100% - 40px) 100%,
+                        0 100%,
+                        0 40px
+                    )
 
                     .project-link
-                        width: 40%
+                        width: 50%
 
                         .project-card
-                            position: relative
                             padding: 2em
                             margin: 2em
-                            height: 1em
-                            color: black
-                            transition: transform 0.3s ease, height 0.5s ease
-
-                            h2
-                                opacity: 0
-                                visibility: hidden
-                                transition: opacity 0.3s ease
+                            color: white
+                            transition: transform 0.3s ease
 
                             &:hover
-                                height: 12em
                                 transform: scale(1.04)
-
-                                h2,
-                                img
-                                    opacity: 1
-                                    visibility: visible
-
+                            
                         h1,
                         h2
                             text-align: center
-
-                        h2
-                            position: absolute
-                            top: 35%
-                            left: 50%
-                            transform: translateX(-50%)
-                            font-weight: 300
 
                         #project-nina:hover
 
                             h1,
                             h2
-                                //color: #5a1c77
                                 color: #a8d5d8
 
                         #project-kasa:hover
@@ -386,16 +395,16 @@ body
                                 transform: scale(1)
 
     footer
-        position: relative
+        display: flex
+        flex-direction: row
+        align-content: center
+        justify-content: space-between
 
-        p
-            text-align: center
+        p,
+        a
             margin: 1.5em
 
         a
-            position: absolute
-            right: 1em
-            top: 1.5em
             transition: transform 0.3s ease
 
             &:hover

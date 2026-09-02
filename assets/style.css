@@ -151,6 +151,18 @@ body main #wrapper #about .about-txt p {
 body main #wrapper #about .about-txt a {
   color: #7957ec;
 }
+body main #wrapper #curriculum {
+  width: 85%;
+  margin: 2em auto;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5em;
+  padding: 2em;
+  clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
+}
 body main #wrapper .quote {
   display: flex;
   flex-direction: column;
@@ -181,42 +193,26 @@ body main #wrapper #projects #projects-section {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: black;
+  width: 85%;
+  margin: 2em auto;
+  clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
 }
 body main #wrapper #projects #projects-section .project-link {
-  width: 40%;
+  width: 50%;
 }
 body main #wrapper #projects #projects-section .project-link .project-card {
-  position: relative;
   padding: 2em;
   margin: 2em;
-  height: 1em;
-  color: black;
-  transition: transform 0.3s ease, height 0.5s ease;
-}
-body main #wrapper #projects #projects-section .project-link .project-card h2 {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
+  color: white;
+  transition: transform 0.3s ease;
 }
 body main #wrapper #projects #projects-section .project-link .project-card:hover {
-  height: 12em;
   transform: scale(1.04);
-}
-body main #wrapper #projects #projects-section .project-link .project-card:hover h2,
-body main #wrapper #projects #projects-section .project-link .project-card:hover img {
-  opacity: 1;
-  visibility: visible;
 }
 body main #wrapper #projects #projects-section .project-link h1,
 body main #wrapper #projects #projects-section .project-link h2 {
   text-align: center;
-}
-body main #wrapper #projects #projects-section .project-link h2 {
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-weight: 300;
 }
 body main #wrapper #projects #projects-section .project-link #project-nina:hover h1,
 body main #wrapper #projects #projects-section .project-link #project-nina:hover h2 {
@@ -345,16 +341,16 @@ body main #wrapper #contact #formulaire .form .button:active {
   transform: scale(1);
 }
 body footer {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
 }
-body footer p {
-  text-align: center;
+body footer p,
+body footer a {
   margin: 1.5em;
 }
 body footer a {
-  position: absolute;
-  right: 1em;
-  top: 1.5em;
   transition: transform 0.3s ease;
 }
 body footer a:hover {

@@ -77,68 +77,62 @@ body
             margin: 0 auto 8em auto
             padding: 0.5em 2em 2em
 
-            .section-titles
-                margin-bottom: 0
-
-            .subtitles
-                text-align: center
-                margin-bottom: 1em
-                     
-            a
+            #ressources-logo,
+            #veille-logo
                 display: flex
+                flex-direction: row
+                flex-wrap: wrap
                 justify-content: center
-                color: #7957ec
+                gap: 5em
+                margin: 8em auto 8em auto
 
-            .project-gallery
-                background-color: #00000011
-                margin: 2em 0 2em 0
-                padding: 2em 0 2em 0
-                border-radius: 8px
-
-                .project-screenshots
+                .ressources-veille-logo-wrap
                     display: flex
-                    flex-direction: row
-                    justify-content: center
-                    flex-wrap: wrap
-                    gap: 2em
+                    flex-direction: column
+                    align-items: center
+                    gap: 1em
 
-                    a
-                        width: 30%
-                        transition: transform 0.3s ease
+                .ressources-veille-logo
+                    width: 100px
+                    height: 100px
 
-                        &:hover
-                            transform: scale(1.04)
+        #inspirations
+            width: 85%
+            margin: 8em auto
+            color: white
+            background-color: black
+            display: flex
+            flex-direction: row
+            justify-content: center
+            flex-wrap: wrap
+            gap: 6em
+            padding: 2em
+            clip-path: polygon(
+                40px 0,
+                100% 0,
+                100% calc(100% - 40px),
+                calc(100% - 40px) 100%,
+                0 100%,
+                0 40px
+            )
 
-                        img
-                            width: 100%
+            a
+                color: white
+                font-size: 30px
+                transition: transform 0.5s ease
 
-            .project-description
-                margin-bottom: 3em
-
-            .project-used-techno
-
-                .project-section-techno
-                    display: flex
-                    flex-direction: row
-                    justify-content: center
-                    gap: 5em
-                    margin: 2em auto 3em auto
-
-                    .project-techno-logo-wrap
-                        display: flex
-                        flex-direction: column
-                        align-items: center
-                        gap: 1em
-
-                    .project-techno-logo
-                        width: 100px
-                        height: 100px
+                &:hover
+                    color: #7957ec
+                    transform: scale(1.06)
 
     footer
         display: flex
         flex-direction: row
         align-content: center
         justify-content: space-between
+
+        #footer-veille
+            visibility: hidden
 
         p,
         a
@@ -149,9 +143,3 @@ body
 
             &:hover
                 transform: scale(1.04)
-
-#baguetteBox-overlay
-    .full-image
-        img
-            max-width: 75vw
-            max-height: auto

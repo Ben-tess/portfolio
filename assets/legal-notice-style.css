@@ -65,11 +65,23 @@ body main #wrapper {
   padding: 0.5em 2em 2em;
 }
 body footer {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
 }
-body footer p {
-  text-align: center;
+body footer #footer-notice {
+  visibility: hidden;
+}
+body footer p,
+body footer a {
   margin: 1.5em;
+}
+body footer a {
+  transition: transform 0.3s ease;
+}
+body footer a:hover {
+  transform: scale(1.04);
 }
 
 /*# sourceMappingURL=legal-notice-style.css.map */

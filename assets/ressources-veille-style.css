@@ -77,66 +77,57 @@ body main #wrapper {
   margin: 0 auto 8em auto;
   padding: 0.5em 2em 2em;
 }
-body main #wrapper .section-titles {
-  margin-bottom: 0;
-}
-body main #wrapper .subtitles {
-  text-align: center;
-  margin-bottom: 1em;
-}
-body main #wrapper a {
-  display: flex;
-  justify-content: center;
-  color: #7957ec;
-}
-body main #wrapper .project-gallery {
-  background-color: rgba(0, 0, 0, 0.0666666667);
-  margin: 2em 0 2em 0;
-  padding: 2em 0 2em 0;
-  border-radius: 8px;
-}
-body main #wrapper .project-gallery .project-screenshots {
+body main #wrapper #ressources-logo,
+body main #wrapper #veille-logo {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 2em;
-}
-body main #wrapper .project-gallery .project-screenshots a {
-  width: 30%;
-  transition: transform 0.3s ease;
-}
-body main #wrapper .project-gallery .project-screenshots a:hover {
-  transform: scale(1.04);
-}
-body main #wrapper .project-gallery .project-screenshots a img {
-  width: 100%;
-}
-body main #wrapper .project-description {
-  margin-bottom: 3em;
-}
-body main #wrapper .project-used-techno .project-section-techno {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
   gap: 5em;
-  margin: 2em auto 3em auto;
+  margin: 8em auto 8em auto;
 }
-body main #wrapper .project-used-techno .project-section-techno .project-techno-logo-wrap {
+body main #wrapper #ressources-logo .ressources-veille-logo-wrap,
+body main #wrapper #veille-logo .ressources-veille-logo-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
 }
-body main #wrapper .project-used-techno .project-section-techno .project-techno-logo {
+body main #wrapper #ressources-logo .ressources-veille-logo,
+body main #wrapper #veille-logo .ressources-veille-logo {
   width: 100px;
   height: 100px;
+}
+body main #inspirations {
+  width: 85%;
+  margin: 8em auto;
+  color: white;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6em;
+  padding: 2em;
+  clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
+}
+body main #inspirations a {
+  color: white;
+  font-size: 30px;
+  transition: transform 0.5s ease;
+}
+body main #inspirations a:hover {
+  color: #7957ec;
+  transform: scale(1.06);
 }
 body footer {
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
+}
+body footer #footer-veille {
+  visibility: hidden;
 }
 body footer p,
 body footer a {
@@ -149,9 +140,4 @@ body footer a:hover {
   transform: scale(1.04);
 }
 
-#baguetteBox-overlay .full-image img {
-  max-width: 75vw;
-  max-height: auto;
-}
-
-/*# sourceMappingURL=project-style.css.map */
+/*# sourceMappingURL=ressources-veille-style.css.map */
