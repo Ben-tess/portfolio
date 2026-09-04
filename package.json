@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass assets/style.sass assets/style.css --watch"
+    "test": "echo \"Error: no test specified\"",
+    "sass": "sass assets/style.sass assets/style.css --watch",
+    "build:css": "sass assets/style.sass assets/style.min.css --style=compressed && sass assets/legal-notice-style.sass assets/legal-notice-style.min.css --style=compressed && sass assets/ressources-veille-style.sass assets/ressources-veille-style.min.css --style=compressed && sass assets/project-style.sass assets/project-style.min.css --style=compressed",
+    "build:js": "terser assets/script.js -c -m -o assets/script.min.js",
+    "build": "npm run build:css && npm run build:js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +23,7 @@
   },
   "homepage": "https://github.com/Ben-tess/portfolio#readme",
   "devDependencies": {
-    "sass": "^1.103.1"
+    "sass": "^1.103.1",
+    "terser": "^5.51.2"
   }
 }
