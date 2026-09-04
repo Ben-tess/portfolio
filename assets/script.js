@@ -22,7 +22,6 @@ class FloatingLabel {
 
             if (!input) return;
 
-            // Quand l'utilisateur écrit dans le champ
             ["keyup", "input", "change"].forEach(event => {
 
                 input.addEventListener(event, () => {
@@ -38,21 +37,18 @@ class FloatingLabel {
                 });
             });
 
-            // Quand le champ reçoit le focus
             input.addEventListener("focus", () => {
                 input.parentNode.classList.add(
                     this.options.focusClass
                 );
             });
 
-            // Quand le champ perd le focus
             input.addEventListener("blur", () => {
                 input.parentNode.classList.remove(
                     this.options.focusClass
                 );
             });
 
-            // Vérifie si le champ est déjà rempli
             input.parentNode.classList.toggle(
                 this.options.activeClass,
                 !!input.value
@@ -61,11 +57,12 @@ class FloatingLabel {
     }
 }
 
-// Initialisation
 window.floatingLabel = new FloatingLabel(
     document.querySelector(".form")
 );
 
 window.addEventListener("load", () => {
-    baguetteBox.run(".baguetteBoxGallery");
+    if (typeof baguetteBox !== "undefined") {
+        baguetteBox.run(".baguetteBoxGallery");
+    }
 });

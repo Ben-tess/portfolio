@@ -81,3 +81,57 @@ body
 
             &:hover
                 transform: scale(1.04)
+
+// RESPONSIVE //
+
+@media screen and (max-width: 767px)
+
+    header
+        
+        .nav
+            flex-direction: column
+            text-align: center
+
+            ul
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                padding: 1em
+
+                li
+                    margin: 0 !important
+            
+    main
+        padding-top: 0 !important
+
+        #wrapper
+            width: 100% !important
+            margin: 0 !important
+            box-sizing: border-box
+            padding: 0 !important
+
+            #legal-notice
+                margin-bottom: -1em
+
+    footer
+        position: relative
+        margin-top: 3em
+
+        p,
+        a
+            margin: 0 !important
+
+        a
+            position: absolute
+
+        #footer-veille
+            top: 0
+            right: 1em
+
+        p
+            position: absolute
+            top: 3em
+            padding-bottom: 1em
+            left: 50%
+            transform: translateX(-50%)
+            white-space: nowrap

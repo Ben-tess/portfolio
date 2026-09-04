@@ -112,6 +112,9 @@ body main #wrapper .project-gallery .project-screenshots a:hover {
 body main #wrapper .project-gallery .project-screenshots a img {
   width: 100%;
 }
+body main #wrapper .project-gallery .project-screenshots .project-screenshots-hero-text {
+  display: none;
+}
 body main #wrapper .project-description {
   margin-bottom: 3em;
 }
@@ -152,6 +155,150 @@ body footer a:hover {
 #baguetteBox-overlay .full-image img {
   max-width: 75vw;
   max-height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  html .section-titles, body .section-titles {
+    flex-direction: column;
+    font-size: 3em;
+    margin: 0em;
+  }
+  header .nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  header .nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+  }
+  header .nav ul li {
+    margin: 0 !important;
+  }
+  main {
+    padding-top: 0 !important;
+  }
+  main #main-title {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 0 3em 0 !important;
+    color: white;
+    font-size: 2em !important;
+  }
+  main #main-title h1,
+  main #main-title p {
+    margin: 0;
+  }
+  main #wrapper {
+    width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+    padding: 0 !important;
+  }
+  main #wrapper .section-titles {
+    max-width: 100%;
+    text-align: center;
+  }
+  main #wrapper .project-gallery .project-screenshots {
+    gap: 1em 0 !important;
+  }
+  main #wrapper .project-gallery .project-screenshots a {
+    width: 100% !important;
+  }
+  main #wrapper .project-gallery .project-screenshots a img {
+    position: relative;
+    width: 100% !important;
+  }
+  main #wrapper .project-gallery .project-screenshots .project-screenshots-hero {
+    position: relative;
+    width: 90% !important;
+  }
+  main #wrapper .project-gallery .project-screenshots .project-screenshots-hidden {
+    display: none;
+  }
+  main #wrapper .project-gallery .project-screenshots .project-screenshots-hero-text {
+    display: flex !important;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  main #wrapper .project-used-techno .project-section-techno {
+    gap: 2.5em !important;
+    margin: 0 !important;
+  }
+  main #wrapper .project-used-techno .project-section-techno .project-techno-logo {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  footer {
+    position: relative;
+    margin-top: 3em;
+  }
+  footer p,
+  footer a {
+    margin: 0 !important;
+  }
+  footer a {
+    position: absolute;
+  }
+  footer #footer-notice {
+    top: 0;
+    left: 1em;
+  }
+  footer #footer-veille {
+    top: 0;
+    right: 1em;
+  }
+  footer p {
+    position: absolute;
+    top: 3em;
+    padding-bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-titles {
+    max-width: 100%;
+    text-align: center;
+    font-size: 2.5em !important;
+    margin: 2em 1.5em !important;
+  }
+  .project-gallery .project-screenshots {
+    gap: 1em 0 !important;
+  }
+  .project-gallery .project-screenshots a {
+    width: 100% !important;
+  }
+  .project-gallery .project-screenshots a img {
+    position: relative;
+    width: 100% !important;
+  }
+  .project-gallery .project-screenshots .project-screenshots-hero {
+    position: relative;
+    width: 90% !important;
+  }
+  .project-gallery .project-screenshots .project-screenshots-hidden {
+    display: none !important;
+  }
+  .project-gallery .project-screenshots .project-screenshots-hero-text {
+    display: flex !important;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
 
 /*# sourceMappingURL=project-style.css.map */

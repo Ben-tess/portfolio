@@ -98,7 +98,7 @@ body main #wrapper #veille-logo .ressources-veille-logo {
   width: 100px;
   height: 100px;
 }
-body main #inspirations {
+body main #wrapper #inspirations {
   width: 85%;
   margin: 8em auto;
   color: white;
@@ -111,12 +111,12 @@ body main #inspirations {
   padding: 2em;
   clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
 }
-body main #inspirations a {
+body main #wrapper #inspirations a {
   color: white;
   font-size: 30px;
   transition: transform 0.5s ease;
 }
-body main #inspirations a:hover {
+body main #wrapper #inspirations a:hover {
   color: #7957ec;
   transform: scale(1.06);
 }
@@ -138,6 +138,86 @@ body footer a {
 }
 body footer a:hover {
   transform: scale(1.04);
+}
+
+@media screen and (max-width: 767px) {
+  html .section-titles, body .section-titles {
+    flex-direction: column;
+    font-size: 3em;
+    margin: 0em;
+  }
+  header .nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  header .nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+  }
+  header .nav ul li {
+    margin: 0 !important;
+  }
+  main {
+    padding-top: 0 !important;
+  }
+  main #main-title {
+    flex-direction: column;
+    text-align: center;
+    margin: 0 0 3em 0 !important;
+    color: white;
+    font-size: 2em !important;
+  }
+  main #main-title h1,
+  main #main-title p {
+    margin: 0;
+  }
+  main #wrapper {
+    width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+    padding: 0 !important;
+  }
+  main #wrapper #ressources-logo,
+  main #wrapper #veille-logo {
+    margin: 2em auto 2em auto !important;
+  }
+  main #wrapper #inspirations {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    gap: 3em !important;
+  }
+  footer {
+    position: relative;
+    margin-top: 3em;
+  }
+  footer p,
+  footer a {
+    margin: 0 !important;
+  }
+  footer a {
+    position: absolute;
+  }
+  footer #footer-notice {
+    top: 0;
+    left: 1em;
+  }
+  footer p {
+    position: absolute;
+    top: 3em;
+    padding-bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  html .section-titles, body .section-titles {
+    font-size: 2.5em;
+    margin: 2em 1.5em;
+  }
 }
 
 /*# sourceMappingURL=ressources-veille-style.css.map */

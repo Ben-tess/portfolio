@@ -84,4 +84,55 @@ body footer a:hover {
   transform: scale(1.04);
 }
 
+@media screen and (max-width: 767px) {
+  header .nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  header .nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+  }
+  header .nav ul li {
+    margin: 0 !important;
+  }
+  main {
+    padding-top: 0 !important;
+  }
+  main #wrapper {
+    width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+    padding: 0 !important;
+  }
+  main #wrapper #legal-notice {
+    margin-bottom: -1em;
+  }
+  footer {
+    position: relative;
+    margin-top: 3em;
+  }
+  footer p,
+  footer a {
+    margin: 0 !important;
+  }
+  footer a {
+    position: absolute;
+  }
+  footer #footer-veille {
+    top: 0;
+    right: 1em;
+  }
+  footer p {
+    position: absolute;
+    top: 3em;
+    padding-bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+}
+
 /*# sourceMappingURL=legal-notice-style.css.map */

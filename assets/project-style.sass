@@ -112,6 +112,9 @@ body
                         img
                             width: 100%
 
+                    .project-screenshots-hero-text
+                        display: none
+
             .project-description
                 margin-bottom: 3em
 
@@ -155,3 +158,159 @@ body
         img
             max-width: 75vw
             max-height: auto
+
+// RESPONSIVE //
+
+@media screen and (max-width: 767px)
+
+    html, body
+
+        .section-titles
+            flex-direction: column
+            font-size: 3em
+            margin: 0em
+
+    header
+        
+        .nav
+            flex-direction: column
+            text-align: center
+
+            ul
+                display: flex
+                flex-direction: row
+                justify-content: space-between
+                padding: 1em
+
+                li
+                    margin: 0 !important
+            
+    main
+        padding-top: 0 !important
+
+        #main-title
+            flex-direction: column
+            text-align: center
+            margin: 0 0 3em 0 !important
+            color: white
+            font-size: 2em !important
+
+            h1,
+            p
+                margin: 0
+
+        #wrapper
+            width: 100% !important
+            margin: 0 !important
+            box-sizing: border-box
+            padding: 0 !important
+
+            .section-titles
+                max-width: 100%
+                text-align: center
+
+            .project-gallery
+
+                .project-screenshots
+                    gap: 1em 0 !important
+
+                    a
+                        width: 100% !important
+
+                        img
+                            position: relative
+                            width: 100% !important
+
+                    .project-screenshots-hero
+                        position: relative
+                        width: 90% !important
+
+                    .project-screenshots-hidden
+                        display: none
+
+                    .project-screenshots-hero-text
+                        display: flex !important
+                        position: absolute
+                        inset: 0
+                        width: 100%
+                        height: 100%
+                        align-items: center
+                        justify-content: center
+                        color: white
+                        background: rgba(0, 0, 0, 0.5)
+
+            .project-used-techno
+
+                .project-section-techno
+                    gap: 2.5em !important
+                    margin: 0 !important
+
+                    .project-techno-logo
+                        width: 80px !important
+                        height: 80px !important
+
+    footer
+        position: relative
+        margin-top: 3em
+
+        p,
+        a
+            margin: 0 !important
+
+        a
+            position: absolute
+
+        #footer-notice
+            top: 0
+            left: 1em
+
+        #footer-veille
+            top: 0
+            right: 1em
+
+        p
+            position: absolute
+            top: 3em
+            padding-bottom: 1em
+            left: 50%
+            transform: translateX(-50%)
+            white-space: nowrap
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px)
+
+    .section-titles
+        max-width: 100%
+        text-align: center
+        font-size: 2.5em !important
+        margin: 2em 1.5em !important
+
+    .project-gallery
+
+        .project-screenshots
+            gap: 1em 0 !important
+
+            a
+                width: 100% !important
+
+                img
+                    position: relative
+                    width: 100% !important
+
+            .project-screenshots-hero
+                position: relative
+                width: 90% !important
+
+            .project-screenshots-hidden
+                display: none !important
+
+            .project-screenshots-hero-text
+                display: flex !important
+                position: absolute
+                inset: 0
+                width: 100%
+                height: 100%
+                align-items: center
+                justify-content: center
+                color: white
+                background: rgba(0, 0, 0, 0.5)
